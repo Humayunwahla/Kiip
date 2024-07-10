@@ -32,7 +32,7 @@ function Addedquote() {
         </div>
         <div className='flex flex-row gap-10 mx-auto mt-8 '>
             
-        <div className='lg:w-[870px] w-auto lg:h-[473px] h-auto border-2 rounded-3xl p-[25px]'>
+        <div className='lg:w-[870px] w-auto lg:h-[473px] h-auto border-2 rounded-3xl p-[25px]  mb-7'>
         <div className='flex flex-col'>
             <div>
                 <h2 className='text-3xl font-semibold text-center sm:text-left font-aeroport'>Select Catagory</h2>
