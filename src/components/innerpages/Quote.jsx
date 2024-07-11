@@ -24,7 +24,7 @@ function Quote() {
         </div>
         
         <div className='flex flex-row gap-3 text-white font-semibold text-xl justify-items-center'>
-                <button className='bg-[#3ccad1] lg:w-[195px] w-[95px]font-aeroport font-normal h-[52px]'>Log In</button>
+        <Link to="/form"><button className='bg-[#3ccad1] lg:w-[195px] w-[95px]font-aeroport font-normal h-[52px]'>Log In</button></Link>
         </div>
             
         
@@ -35,7 +35,7 @@ function Quote() {
         <h2 className='text-4xl text-center font-semibold font-aeroport'>How do you prefer to quote?</h2>
         </div>
         <div className='flex lg:flex-row flex-col gap-10 mx-auto mt-16 text-center'>
-            <Link to="selfquote">
+            <Link to="/selfquote">
         <div className='w-[290px] h-[290px] border-2 content-center rounded-3xl'
         >
             <img src={chair} alt="chair"

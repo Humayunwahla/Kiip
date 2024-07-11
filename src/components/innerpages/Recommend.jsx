@@ -21,7 +21,7 @@ function Recommend() {
     </div>
     
     <div className='flex flex-row gap-3 text-white font-semibold text-xl justify-items-center'>
-            <button className='bg-[#3ccad1] lg:w-[195px] w-[95px] h-[52px] font-aeroport'>Log In</button>
+    <Link to="/form">     <button className='bg-[#3ccad1] lg:w-[195px] w-[95px] h-[52px] font-aeroport'>Log In</button></Link>
     </div>
         
     
@@ -52,7 +52,7 @@ function Recommend() {
         </div>
         </div>
         <div className='md:text-right text-center mt-5 '>
-            <Link to="recomend">
+            <Link to="/form">
         <button className='bg-[#3ccad1] w-[195px] h-[52px] rounded-2xl  font-aeroport'>CALCULATE</button>
         </Link></div>
     </div>

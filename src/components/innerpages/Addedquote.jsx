@@ -21,17 +21,15 @@ function Addedquote() {
         </div>
         
         <div className='flex flex-row gap-3 text-white font-semibold text-xl justify-items-center'>
+        <Link to="/form">
         <button className='bg-[#3ccad1] md:w-[195px] w-[95px] h-[52px] font-aeroport'>Log In</button>
-        </div>   
-    </div>
-
-      
+        </Link></div>   
+    </div>  
     <div className='flex flex-col items-center mt-24 '>
         <div>
         <h2 className='text-4xl font-semibold font-aeroport'>Self-quote</h2>
         </div>
-        <div className='flex flex-row gap-10 mx-auto mt-8 '>
-            
+        <div className='flex flex-row gap-10 mx-auto mt-8 '>           
         <div className='lg:w-[870px] w-auto lg:h-[473px] h-auto border-2 rounded-3xl p-[25px]  mb-7'>
         <div className='flex flex-col'>
             <div>
@@ -51,7 +49,7 @@ function Addedquote() {
                 <h2 className='text-3xl text-center sm:text-left font-semibold font-aeroport'>Select Items</h2>
             </div>
             <div className='mt-4 space-y-3 text-center space-x-2'>
-                <button className='w-[126px] h-[54px] border-2 rounded-full font-aeroport'>Single Bed</button>
+                <button className='w-[126px] h-[54px] border-2  rounded-full font-aeroport'>Single Bed</button>
                 <button className='w-[126px] h-[54px] border-2  rounded-full font-aeroport'>Double Bed</button>
                 <button className='w-[110px] h-[54px] border-2  rounded-full font-aeroport'>Cradle</button>
                 <button className='w-[110px] h-[54px] border-2  rounded-full font-aeroport'>Bunk Bed</button>
@@ -67,7 +65,7 @@ function Addedquote() {
             </div>
             </div>
             <div className='sm:text-right text-center md:-mt-10 mt-5'>
-                <Link to="recomend">
+                <Link to="/recomend">
             <button className='bg-[#3ccad1] w-[195px] h-[52px] rounded-2xl font-aeroport '>CALCULATE</button>
             </Link></div>
         </div>
