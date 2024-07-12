@@ -13,6 +13,12 @@
   font-weight:400;
   font-style:normal;
 }
+@font-face {
+  font-family: 'Aeroport';
+  src:url('../src/assets/Aeroport-trial-11/Aeroport-monospaced-trial.otf') format('otf');
+  font-weight:100;
+  font-style:normal;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

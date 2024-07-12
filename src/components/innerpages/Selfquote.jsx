@@ -2,6 +2,7 @@ import React from 'react'
 import Homeogo from "../../assets/icons/logo.png"
 import {useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import selfquote from '../../assets/selfquote.png'
 
 
 const lists = {
@@ -113,10 +114,8 @@ const lists = {
         { name: 'Chair', quantity: 2, length: 0.53, width: 0.40, height: 1.08, weight: 5.0 }
       ]
 };
-
 const ItemList = ({ items }) => {
   const scrollRef = useRef(null);
-
   const scroll = (direction) => {
       const { current } = scrollRef;
       if (direction === "left") {
@@ -125,84 +124,54 @@ const ItemList = ({ items }) => {
           current.scrollBy({ left: 200, behavior: 'smooth' });
       }
   };
-
-  return(
-   
-     <div className="relative">
-<button onClick={() => scroll('left')} className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 text-8xl -ml-14 font-extralight">{"<"}</button>
-  <div className='overflow-hidden gap-3 flex flex-row  ' ref={scrollRef} style={{ scrollBehavior: 'smooth' }} >
-    
+  return( 
+     <div className="relative ">
+<button onClick={() => scroll('left')} className="absolute left-0 top-7 transform -translate-y-1/2 z-10 text-8xl -ml-9 font-extralight">{"<"}</button>
+  <div className=' overflow-hidden gap-3 flex flex-row  ' ref={scrollRef} style={{ scrollBehavior: 'smooth' }} >  
       {items.map((item, index) => (
-        <button key={index}  className=' h-[74px] w-fit border-2 px-10 rounded-full font-normal font-aeroport'>
+        <button key={index}  className=' h-[74px] w-fit border-2 px-10 rounded-full font font-aeroport '>
           {item.name}
         </button>
-      ))}
-    
+      ))}    
     </div>
-    <button onClick={() => scroll('right')} className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 text-8xl -mr-14 font-extralight">{">"}</button>
+    <button onClick={() => scroll('right')} className="absolute right-0 top-7 transform -translate-y-1/2 z-10 text-8xl -mr-9 font-extralight">{">"}</button>
 </div>
   );
 };
-
-
-  
-
-    
-  
-
-
 function Selfquote() {
-  
-
-    const [visibleList, setVisibleList] = useState(null);
-   
+    const [visibleList, setVisibleList] = useState(null);  
     const handleButtonClick = (listName) => {
       setVisibleList(visibleList === listName ? null : listName);
-    };
-
-
-   
-
-   
-
-   
+    }; 
   return (
     <div>
         <div className='p-8 flex flex-row justify-between border-b-2'>
         <div className='flex flex-row gap-2 justify-items-center'>
             <div className='mt-3'>
                 <img src={Homeogo} width={36} height={36} 
-                className='' alt=''/>
-               
-                
-            </div>
-           
+                className='' alt=''/>              
+            </div>          
             <div className='flex flex-row gap-2'>
                 <p className='text-5xl'>|</p>
              <h2 className=' text-3xl mt-2'>Kiip</h2>
             </div>
-        </div>
-        
+        </div>  
         <div className='flex flex-row gap-3 text-white font-semibold text-xl justify-items-center'>
         <Link to="/form">      <button className='bg-[#3ccad1] md:w-[195px] w-[95px] h-[52px] font-aeroport'>Log In</button></Link>
-        </div>
-            
-        
-    </div>
-
-      
+        </div>      
+    </div>    
     <div className='flex flex-col items-center mt-20 '>
         <div>
         <h2 className='text-4xl font-bold font-aeroport'>Self-quote</h2>
         </div>
-        <div className='flex flex-row gap-10 mx-auto mt-8 '>
-            
-        <div className='lg:w-[870px] w-[300px] sm:w-[450px]  lg:h-[473px] h-auto border-2 rounded-3xl p-[25px] mb-7'>
-           <div className='flex flex-col'>
+        <div className='flex flex-row  gap-10 mx-auto mt-8 '>       
+        <div className='lg:w-[1070px] w-[300px] gap-16 sm:w-[450px] flex lg:flex-row flex-col  lg:h-[473px] h-auto border-2 rounded-3xl p-[25px] mb-7'>
+           <div>
+            <div className='flex flex-col'>
             <div>
-                <h2 className='text-3xl font-semibold font-aeroport text-center sm:text-left'>Select Catagory</h2>
+                <h2 className='text-xl font-semibold font-aeroport text-center sm:text-left'>Select Catagory</h2>
             </div>
-            <div className='mt-4 text-center  space-x-2 space-y-3'>
+            <div className='mt-4 text-center lg:flex lg:flex-col  space-x-2 space-y-3'>
                 <button onClick={() => handleButtonClick('rooms')} className='w-[126px] h-[44px] bg-[#3ccad1]  rounded-full  font-aeroport'>Bedroom</button>
                 <button onClick={() => handleButtonClick('livingRoomDiningRoom')} className='w-[126px] h-[44px] border-2  rounded-full font-aeroport'>Living Room</button>
                 <button onClick={() => handleButtonClick('cookingAndWashing')} className='w-[180px] h-[44px] border-2  rounded-full font-aeroport'>Cooking and Washing</button>
@@ -211,19 +180,23 @@ function Selfquote() {
                 <button onClick={() => handleButtonClick('office')} className='w-[110px] h-[44px] border-2  rounded-full font-aeroport'>Office</button>
             </div>
             </div> 
-            <div className='flex flex-col mt-3'>
+           </div>
+           <div className='lg:w-3/4'>
+
+            <div className='flex flex-col mt-1'>
             <div>
-                <h2 className='text-3xl text-center sm:text-left font-semibold font-aeroport'>Select Items</h2>
+                <h2 className='text-xl text-center sm:text-left font-semibold font-aeroport'>Select Items</h2>
             </div>
-            <div className='mt-4 text-center   ' >  
-                   
-            {visibleList && <ItemList items={lists[visibleList]} />}
-           
+            <div className='mt-4 text-center' >                     
+            {visibleList && <ItemList items={lists[visibleList]} />}           
         </div>
             </div> 
             <div className='flex flex-col mt-3'>
             <div>
-                <h2 className='text-3xl text-center sm:text-left font-semibold font-aeroport'>Added Items</h2>
+                <h2 className='text-xl text-center sm:text-left font-semibold font-aeroport'>Added Items</h2>
+                <img src={selfquote} alt="selfquote"
+                width={301} 
+                className='mx-auto my-auto'/>
             </div>
             </div> 
             <div className='text-right mt-20'>
@@ -233,12 +206,11 @@ function Selfquote() {
             >CALCULATE</button>
             </Link>
             </div>
+           </div>
         </div>
         </div>
     </div>
     </div>
   )
 }
-
-
 export default Selfquote

@@ -9,6 +9,9 @@ import Recommend from './components/innerpages/Recommend';
 import Form from './components/auth/Form';
 import Show from './components/innerpages/Show';
 import Quote from './components/innerpages/Quote';
+import Savemore from './components/innerpages/Savemore';
+import Ultimate from './components/innerpages/Ultimate';
+import Flexible from './components/innerpages/Flexible';
 
 
 function App() {
@@ -23,6 +26,11 @@ function App() {
       <Route  path='/form' element={<Form/>}/>
       <Route  path='/show' element={<Show/>}/>
       <Route  path='/quote' element={<Quote/>}/>
+      <Route  path='/savemore' element={<Savemore/>}/>
+      <Route  path='/ultimate' element={<Ultimate/>}/>
+      <Route  path='/flexible' element={<Flexible/>}/>
+
+
     </Routes>
     </BrowserRouter>
     
