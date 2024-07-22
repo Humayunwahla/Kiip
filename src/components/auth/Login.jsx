@@ -1,6 +1,7 @@
 import React from 'react'
 
 import  Homeogo from '../../assets/icons/logo.png'
+import { Link } from 'react-router-dom'
 
 function Login() {
   return (
@@ -25,9 +26,10 @@ function Login() {
                 <input type="password" placeholder='Password'  className='w-[393px] mt-4 h-[52px] bg-gray-200'/>
             </div>
             <div className='flex flex-col gap-3 mt-6 items-center'>
+            <Link to={"/dashboardmenu"}>
             <button className='bg-[#3ccad1]   sm:w-[395px] w-[195px] h-[52px]
              justify-center text-white font-semibold font-aeroport
-             '>Log in</button>
+             '>Log in</button></Link>
             </div>
         </div>
         </div>
