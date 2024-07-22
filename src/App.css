@@ -45,7 +45,8 @@
 }
 
 .background2{
-  background-image: url(assets/group.png);
+  background-image: url(assets/group2.png);
   background-repeat: no-repeat;
+  background-size:cover;
  
 }

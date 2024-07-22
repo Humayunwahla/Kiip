@@ -42,13 +42,15 @@ function Quote() {
             className='w-[104px] h-[102] mx-auto' />
             <h2 className='text-xl font-bold mt-6 font-aeroport'>Self-quote</h2>
             <p className='text-xl font-normal font-aeroport'> will do it using the space calculator</p>
-        </div></Link>
+        </div>
+        </Link>
+        <Link to={"/estimated"}>
         <div className='w-[290px] h-[290px] border-2 content-center rounded-3xl'>
             <img src={box2} alt="chair"
             className='w-[104px] h-[102] mx-auto' />
             <h2 className='text-xl font-bold mt-6 font-aeroport'>Assisted quote</h2>
             <p className='text-xl font-normal font-aeroport'> I want personalized help</p>
-        </div>
+        </div></Link>
         </div>
     </div>
     </div>

@@ -8,6 +8,9 @@ module.exports = {
       fontFamily:{
       aeroport:["Aeroport","sans-serif"]
     },
+    fontFamily:{
+      Nunito:["Nunito Sans","sans-serif"]
+    },
   },
     
   },

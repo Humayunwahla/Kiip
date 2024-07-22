@@ -12,6 +12,15 @@ import Quote from './components/innerpages/Quote';
 import Savemore from './components/innerpages/Savemore';
 import Ultimate from './components/innerpages/Ultimate';
 import Flexible from './components/innerpages/Flexible';
+import Estimated from './components/nanopages/Estimated';
+import Valueestimated from './components/nanopages/Valueestimated';
+import Priceestimated from './components/nanopages/Priceestimated';
+import Finalestimated from './components/nanopages/Finalestimated';
+import Login from './components/auth/Login';
+import Dashboard from './components/backend/Dashboard';
+import Dashboardmenu from './components/backend/menu/Dashboardmenu';
+import Userlisting from './components/backend/menu/Userlisting';
+import Warehouse from './components/backend/menu/Warehouse';
 
 
 function App() {
@@ -29,6 +38,19 @@ function App() {
       <Route  path='/savemore' element={<Savemore/>}/>
       <Route  path='/ultimate' element={<Ultimate/>}/>
       <Route  path='/flexible' element={<Flexible/>}/>
+      <Route  path='/estimated' element={<Estimated/>}/>
+      <Route  path='/estimatedvalue' element={<Valueestimated/>}/>
+      <Route  path='/estimatedprice' element={<Priceestimated/>}/>
+      <Route  path='/finalestimated' element={<Finalestimated/>}/>
+      <Route  path='/login' element={<Login/>}/>
+      <Route  path='/dashboard' element={<Dashboard/>}/>
+      <Route  path='/dashboardmenu' element={<Dashboardmenu/>}/>
+      <Route  path='/userlisting' element={<Userlisting/>}/>
+      <Route  path='warehouse' element={<Warehouse/>}/>
+
+
+
+
 
 
     </Routes>
