@@ -142,7 +142,7 @@ function Valueestimated() {
                 <p className='font-semibold'>$349.00 MXN</p>
             </div>
             <div>
-                <img src={arrow} alt="arrow"
+                <img src={arrow} alt="arrow"   
                 className='w-8 h-8' />
             </div>
         </div>
