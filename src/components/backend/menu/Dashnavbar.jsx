@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import Homeogo from "../../../assets/icons/logo.png"
 import { Link } from 'react-router-dom'
+import ai from '../../../assets/icons/ailogo.png'
+import downarrow from '../../../assets/icons/downarrow.png'
 
 function Dashnavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,9 +31,19 @@ function Dashnavbar() {
         </div>
          
         <div className='flex flex-row gap-3    font-aeroport text-xl justify-items-center'>
-                <Link to="login">
-                <button className='bg-[#3ccad1] hidden md:block font-aeroport font-normal sm:w-[195px] w-[95px] h-[52px]'>Log In</button>
-        </Link>
+                <Link to="">
+                <div className='md:flex flex-row items-center justify-between gap-2 hidden font-aeroport font-normal '>
+                  <div className='flex flex-row  gap-1'>
+                  <img src={ai} alt=""
+                  className='w-[36px] h-[36px]' />
+                  <h1 className='font-aeroport font-normal'>Alejandro</h1>
+                  </div>
+                  <div>
+                      <img src={downarrow} alt="" 
+                      className='w-[22px] h-[22px]'/>
+                  </div>
+                </div>
+                </Link>
         <nav className=" md:hidden px-8">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
@@ -73,7 +85,7 @@ function Dashnavbar() {
         </div>
       </div>
       {/* Mobile menu */}
-      <div className={`sm:hidden ${isMenuOpen ? 'block' : 'hidden'}`}  id="mobile-menu">
+      <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'}`}  id="mobile-menu">
         <div className="space-y-1 px-2 pt-2 pb-3 bg-gray-800">
           <button href="#" className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Log In</button>
           <button href="#" className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"><Link to={"/dashboardmenu"}>Dashboard</Link></button>

@@ -11,7 +11,7 @@ function Navbar() {
   };
 
   return (
-    <div className='p-6 flex flex-row justify-between border-b-2'>
+    <div className='p-3 flex flex-row justify-between border-b-2'>
         <div className='flex flex-row gap-2 justify-items-center'>
             <div className='mt-3'>
                 <img src={Homeogo} width={36} height={36} 
@@ -27,12 +27,12 @@ function Navbar() {
         </div>
          
         <div className='flex flex-row gap-3     font-aeroport text-xl justify-items-center'>
-               <div className='md:flex flex-row mt-2 gap-3 hidden font-aeroport font-bold '>
+               <div className='md:flex flex-row mt-2 gap-3 hidden font-aeroport font-semibold '>
                <Link to="show"> <h2>Choose your plan</h2></Link>
                 <h2>Quote your space</h2>
                 </div> 
                 <Link to="login">
-                <button className='bg-[#3ccad1] hidden sm:block font-aeroport font-normal sm:w-[195px] w-[95px] h-[52px]'>Log In</button>
+                <button className='bg-[#3ccad1] rounded-xl hidden sm:block font-aeroport font-normal sm:w-[155px] w-[95px] h-[52px]'>Log In</button>
         </Link>
         
         <nav className=" sm:hidden">
@@ -78,9 +78,9 @@ function Navbar() {
       {/* Mobile menu */}
       <div className={`sm:hidden ${isMenuOpen ? 'block' : 'hidden'}`}  id="mobile-menu">
         <div className="space-y-1 px-2 pt-2 pb-3 bg-gray-800">
-          <button className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Log In</button>
-          <button className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Choose your plan</button>
-          <button  className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Quote your space</button>
+        <Link to="login"> <button className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Log In</button>
+        </Link>  <Link to="show"> <button className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Choose your plan</button>
+          </Link><button  className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Quote your space</button>
           
         </div>
       </div>

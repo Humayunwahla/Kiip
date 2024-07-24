@@ -21,6 +21,8 @@ import Dashboard from './components/backend/Dashboard';
 import Dashboardmenu from './components/backend/menu/Dashboardmenu';
 import Userlisting from './components/backend/menu/Userlisting';
 import Warehouse from './components/backend/menu/Warehouse';
+import Textareestimated from './components/nanopages/Textareestimated';
+
 
 
 function App() {
@@ -47,6 +49,7 @@ function App() {
       <Route  path='/dashboardmenu' element={<Dashboardmenu/>}/>
       <Route  path='/userlisting' element={<Userlisting/>}/>
       <Route  path='warehouse' element={<Warehouse/>}/>
+      <Route  path='estimatetextarea' element={<Textareestimated/>}/>
 
 
 

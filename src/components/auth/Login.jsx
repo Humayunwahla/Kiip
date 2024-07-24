@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom'
 
 function Login() {
   return (
-    <div className='bg-gray-200  h-screen pt-36'>
-       <div className='w-[572px] bg-white h-[400px] mx-auto  rounded-xl'>
+    <div className='bg-gray-200 min-h-screen pt-20 px-4  '>
+       <div className='md:w-[572px]  w-auto bg-white h-[400px] mx-auto  rounded-xl'>
        <div className=' content-center mt-16 '>
         <div className=' gap-2  '>
             <div className='flex flex-row justify-center gap-4  mt-7'>
@@ -20,10 +20,10 @@ function Login() {
              <h2 className=' text-3xl mt-2'>Kiip</h2>
             </div>
             </div>
-            <div className='justify-center font-aeroport mt-5 text-center text-xl'>
+            <div className='justify-center items-center flex flex-col font-aeroport mt-5 text-center text-xl'>
                 <h1 className='font-semibold'>Admin Login</h1>
-                <input type="email" placeholder='Email Address'  className='w-[393px] mt-8 h-[52px] bg-gray-200'/>
-                <input type="password" placeholder='Password'  className='w-[393px] mt-4 h-[52px] bg-gray-200'/>
+                <input type="email" placeholder='Email Address'  className='sm:w-[393px] w-auto mt-8 h-[52px] bg-gray-200'/>
+                <input type="password" placeholder='Password'  className='sm:w-[393px] w-auto mt-4 h-[52px] bg-gray-200'/>
             </div>
             <div className='flex flex-col gap-3 mt-6 items-center'>
             <Link to={"/dashboardmenu"}>

@@ -33,7 +33,7 @@ function Workflexible() {
                   height={35} />
                 <h2 className='font-bold sm:text-4xl text-2xl font-aeroport'>Select items</h2>
             </div>
-                <p className='mt-1 font-semibold font-aeroport sm:text-lg  leading-6 mb-[45px] '>Select items you want to store away and <br/>schedule a visit on the day and time that<br/>uits you best</p>
+                <p className='mt-1 font-semibold font-aeroport sm:text-lg  leading-6 mb-[45px] '>Select items you want to store away and <br/>schedule a visit on the day and time that<br/>suits you best</p>
                 </div>
            </div>
            <div className='flex  flex-col sm:gap-[40px] gap-[16px] lg:mt-48 mt-6 lg:ml-28'>
