@@ -2,7 +2,8 @@ import React from 'react'
 import Homeogo from "../../assets/icons/logo.png"
 import {useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import selfquote from '../../assets/selfquote.png'
+import no1 from '../../assets/icons/no1.png'
+//import selfquote from '../../assets/selfquote.png'
 
 
 const lists = {
@@ -138,11 +139,12 @@ const ItemList = ({ items }) => {
 </div>
   );
 };
-function Selfquote() {
-    const [visibleList, setVisibleList] = useState(null);  
+function Addedquote() {
+  const [visibleList, setVisibleList] = useState(null);  
     const handleButtonClick = (listName) => {
       setVisibleList(visibleList === listName ? null : listName);
     }; 
+
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -150,7 +152,7 @@ function Selfquote() {
     };
   return (
     <div>
-       <div className='p-8 flex flex-row justify-between border-b-2'>
+       <div className='p-4 flex flex-row justify-between border-b-2'>
         <div className='flex flex-row gap-2 justify-items-center'>
             <div className='mt-3'>
                 <img src={Homeogo} width={36} height={36} 
@@ -166,7 +168,7 @@ function Selfquote() {
         </div>
         
         <div className='flex flex-row gap-3 text-white font-semibold text-xl justify-items-center'>
-        <Link to="/form"><button className='bg-[#3ccad1]  hidden sm:block w-[195px] font-aeroport font-normal h-[52px]'>Log In</button></Link>
+        <Link  to="/login"><button className='bg-[#3ccad1] rounded-xl  hidden sm:block w-[155px] font-aeroport font-normal h-[52px]'>Log In</button></Link>
         </div>
             
         <nav className=" sm:hidden">
@@ -212,20 +214,17 @@ function Selfquote() {
       {/* Mobile menu */}
       <div className={`sm:hidden ${isMenuOpen ? 'block' : 'hidden'}`}  id="mobile-menu">
         <div className="space-y-1 px-2 pt-2 pb-3 bg-gray-800">
-          <button className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Log In</button>
-          <button className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Choose your plan</button>
-          <button className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Quote your space</button>
-          
-        </div>
+        <Link to="/login"> <button className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Log In</button>
+        </Link>   </div>
       </div>
     </nav>
-    </div>    
+    </div>   
     <div className='flex flex-col items-center mt-20 '>
         <div>
         <h2 className='text-4xl font-bold font-aeroport'>Self-quote</h2>
         </div>
         <div className='flex flex-row  gap-10 mx-auto mt-8 '>       
-        <div className='lg:w-[1070px] w-[300px] gap-16 sm:w-[450px] flex lg:flex-row flex-col  lg:h-[473px] h-auto border-2 rounded-3xl p-[25px] mb-7'>
+        <div className='lg:w-[1070px] w-[300px] gap-16 sm:w-[450px] flex lg:flex-row flex-col  lg:h-[473px] h-auto border-2 rounded-3xl sm:p-[25px] p-[18px] mb-7'>
            <div>
             <div className='flex flex-col'>
             <div>
@@ -254,9 +253,19 @@ function Selfquote() {
             <div className='flex flex-col mt-3'>
             <div>
                 <h2 className='text-xl text-center sm:text-left font-semibold font-aeroport'>Added Items</h2>
-                <img src={selfquote} alt="selfquote"
-                width={301} 
-                className='mx-auto my-auto'/>
+                
+                <div className='flex flex-row sm:gap-4 gap-2 items-center mt-4 bg-[#F1F1F1]  sm:h-[82px] h-auto md:w-fit sm:px-4 p-2 '>
+                  <div>
+                    <img src={no1} alt="" 
+                    className='w-[34px] h-[34px]'/>
+                  </div>
+                  <div className='font-aeroport font-normal'>
+                      <h1 className=' text-wrap'>Single Bed 0.98m3 | 30.1 kgs</h1>
+                      <h1 className=''>
+                      (Width 184cm Depth 95cm High 56cm)
+                      </h1>
+                  </div>
+                </div>
             </div>
             </div> 
             <div className='text-right mt-20'>
@@ -273,4 +282,4 @@ function Selfquote() {
     </div>
   )
 }
-export default Selfquote
+export default Addedquote

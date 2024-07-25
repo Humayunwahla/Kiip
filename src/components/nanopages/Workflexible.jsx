@@ -18,7 +18,7 @@ function Workflexible() {
             <h2 className='font-bold font-aeroport sm:text-5xl text-3xl mt-[71px]'>How Its Works</h2>
             <p className='font-semibold font-aeroport sm:text-2xl text-lg mt-5'>We take care of everything so that you feel like it's magic</p>
         </div>
-        <div className=' flex lg:flex-row flex-col lg:mt-[64px] mt-[20px] py-10'>
+        <div className=' flex lg:flex-row flex-col justify-center lg:mt-[64px] mt-[20px] py-10'>
         <div className='grid lg:grid-cols-2 grid-cols-1 2xl:px-[69px] mx-2 sm:mx-10 sm:px-[40px] px-[3px] mt-10  '>
         <div className='flex  flex-col sm:gap-[40px] gap-[10px] '>
             <div>
@@ -33,7 +33,7 @@ function Workflexible() {
                   height={35} />
                 <h2 className='font-bold sm:text-4xl text-2xl font-aeroport'>Select items</h2>
             </div>
-                <p className='mt-1 font-semibold font-aeroport sm:text-lg  leading-6 mb-[45px] '>Select items you want to store away and <br/>schedule a visit on the day and time that<br/>uits you best</p>
+                <p className='mt-1 font-semibold font-aeroport sm:text-lg  leading-6 mb-[45px] '>Select items you want to store away and <br/>schedule a visit on the day and time that<br/>suits you best</p>
                 </div>
            </div>
            <div className='flex  flex-col sm:gap-[40px] gap-[16px] lg:mt-48 mt-6 lg:ml-28'>

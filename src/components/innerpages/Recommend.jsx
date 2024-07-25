@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Homeogo from "../../assets/icons/logo.png"
 import { Link } from 'react-router-dom'
+import no1 from '../../assets/icons/no1.png'
 
 function Recommend() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,8 +10,8 @@ function Recommend() {
       setIsMenuOpen(!isMenuOpen);
     };
   return (
-    <div>
-     <div className='p-8 flex flex-row justify-between border-b-2'>
+    <div className='bg-gray-100 h-screen'>
+     <div className='p-4 flex flex-row justify-between border-b-2'>
         <div className='flex flex-row gap-2 justify-items-center'>
             <div className='mt-3'>
                 <img src={Homeogo} width={36} height={36} 
@@ -26,7 +27,7 @@ function Recommend() {
         </div>
         
         <div className='flex flex-row gap-3 text-white font-semibold text-xl justify-items-center'>
-        <Link to="/form"><button className='bg-[#3ccad1]  hidden sm:block w-[195px] font-aeroport font-normal h-[52px]'>Log In</button></Link>
+        <Link to="/login"><button className='bg-[#3ccad1] rounded-xl  hidden sm:block w-[155px] font-aeroport font-normal h-[52px]'>Log In</button></Link>
         </div>
             
         <nav className=" sm:hidden">
@@ -72,11 +73,8 @@ function Recommend() {
       {/* Mobile menu */}
       <div className={`sm:hidden ${isMenuOpen ? 'block' : 'hidden'}`}  id="mobile-menu">
         <div className="space-y-1 px-2 pt-2 pb-3 bg-gray-800">
-          <button className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Log In</button>
-          <button className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Choose your plan</button>
-          <button className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Quote your space</button>
-          
-        </div>
+        <Link to="/login"> <button className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Log In</button>
+        </Link> </div>
       </div>
     </nav>
     </div>
@@ -86,30 +84,38 @@ function Recommend() {
     <div>
     <h2 className='text-4xl text-center  font-semibold font-aeroport'>We recommend</h2>
     </div>
-    <div className='flex flex-row gap-10 mx-auto mt-8 '>
+    <div className='flex md:flex-row flex-col gap-10 mx-auto mt-8 px-4 '>
         
-    <div className='lg:w-[870px] w-auto lg:h-[473px] h-auto border-2 rounded-3xl p-[25px] py-[29px] mb-7'>
+    
+        <div className='flex flex-col  mt-3 bg-white px-3'>
+        <div className='border-b-2 border-gray-200'>
+            <h2 className='text-3xl text-center md:text-left font-semibold font-aeroport mb-3'>Added Items</h2>
+        </div>
+        <div className='flex flex-row sm:gap-4 gap-2 items-center rounded-xl mt-4 bg-[#F1F1F1]   sm:h-[82px] h-auto md:w-fit px-4 p-2 mb-3 '>
+                  <div>
+                    <img src={no1} alt="" 
+                    className='w-[34px] h-[34px]'/>
+                  </div>
+                  <div className='font-aeroport font-normal'>
+                      <h1 className=' text-wrap'>Single Bed 0.98m3 | 30.1 kgs</h1>
+                      <h1 className=''>
+                      (Width 184cm Depth 95cm High 56cm)
+                      </h1>
+                  </div>
+                </div>
+        </div>
         <div className='flex flex-col mt-3'>
-        <div>
-            <h2 className='text-3xl text-center md:text-left font-semibold font-aeroport'>Added Items</h2>
+        <div className='sm:w-[350px] w-full sm:h-[95px]  h-auto bg-[#21A3AA] font-aeroport font-semibold text-white p-2 px-3'>
+                  <h2 className='text-lg'>Storage 1{}</h2>
+                  <h2 className='text-md'>1m2{}</h2>                   {/**Added items are here to add */}
+                  <h2 className='text-md'>Space:2.5m3Used:0.98m3 Weight:30.1 kgs{}</h2>
         </div>
-        <div className='w-[350px] h-[95px] mt-8 bg-[#EFEFEF] font-aeroport'>
-                  <h2>Added items are here{}</h2>                   {/**Added items are here to add */}
-        </div>
-        </div>
-        <div className='flex flex-col mt-3'>
-        <div>
-            <h2 className='text-3xl text-center md:text-left font-semibold font-aeroport'>We recommend</h2>
-        </div>
-        <div className='w-[350px] h-[95px] mt-8 bg-[#EFEFEF] font-aeroport'>
-                  <h2>Added items are here{}</h2>                   {/**Added items are here to add */}
-        </div>
-        </div>
-        <div className='md:text-right text-center mt-5 '>
+        <div className='md:text-right  mt-5 '>
             <Link to="/form">
-        <button className='bg-[#3ccad1] w-[195px] h-[52px] rounded-2xl  font-aeroport'>CALCULATE</button>
+        <button className='bg-[#21A3AA] sm:w-[350px] w-full w-auto h-[52px] rounded-2xl text-white  font-aeroport'>QUOTE NOW</button>
         </Link></div>
-    </div>
+        </div>
+  
     </div>
 </div>
 </div>

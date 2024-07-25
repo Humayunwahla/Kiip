@@ -10,7 +10,7 @@ function Form() {
   };
   return (
     <div>
-    <div className='p-8 flex flex-row justify-between border-b-2'>
+   <div className='p-4 flex flex-row justify-between border-b-2'>
         <div className='flex flex-row gap-2 justify-items-center'>
             <div className='mt-3'>
                 <img src={Homeogo} width={36} height={36} 
@@ -26,7 +26,7 @@ function Form() {
         </div>
         
         <div className='flex flex-row gap-3 text-white font-semibold text-xl justify-items-center'>
-        <Link to="/form"><button className='bg-[#3ccad1]  hidden sm:block w-[195px] font-aeroport font-normal h-[52px]'>Log In</button></Link>
+        <Link to="/login"><button className='bg-[#3ccad1] rounded-xl  hidden sm:block w-[155px] font-aeroport font-normal h-[52px]'>Log In</button></Link>
         </div>
             
         <nav className=" sm:hidden">
@@ -72,11 +72,8 @@ function Form() {
       {/* Mobile menu */}
       <div className={`sm:hidden ${isMenuOpen ? 'block' : 'hidden'}`}  id="mobile-menu">
         <div className="space-y-1 px-2 pt-2 pb-3 bg-gray-800">
-          <button className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Log In</button>
-          <button className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Choose your plan</button>
-          <button className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Quote your space</button>
-          
-        </div>
+        <Link to="/login"> <button className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Log In</button>
+        </Link>  </div>
       </div>
     </nav>
     </div>

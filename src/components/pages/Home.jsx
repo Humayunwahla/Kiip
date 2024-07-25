@@ -18,7 +18,7 @@ function Home() {
             </div>
 
             <img src={home2} alt=""
-            className='px-[10px] bg-contain' />
+            className='px-[10px] w-full' />
         </div>
 
     </div>

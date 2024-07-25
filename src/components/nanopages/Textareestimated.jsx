@@ -1,18 +1,17 @@
 import React, { useState } from 'react'
 import Homeogo from "../../assets/icons/logo.png"
-import chair from '../../assets/icons/chair.png'
-import box2 from '../../assets/icons/box2.png'
-import { Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
-function Quote() {
+function Textareestimated() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => {
       setIsMenuOpen(!isMenuOpen);
     };
   return (
-    <div className=''>
-      <div className='p-4 flex flex-row justify-between border-b-2'>
+    <div>
+      <div>
+       <div className='p-4 flex flex-row justify-between border-b-2'>
         <div className='flex flex-row gap-2 justify-items-center'>
             <div className='mt-3'>
                 <img src={Homeogo} width={36} height={36} 
@@ -75,36 +74,61 @@ function Quote() {
       <div className={`sm:hidden ${isMenuOpen ? 'block' : 'hidden'}`}  id="mobile-menu">
         <div className="space-y-1 px-2 pt-2 pb-3 bg-gray-800">
         <Link to="/login"> <button className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Log In</button>
-        </Link> </div>
+        </Link></div>
       </div>
     </nav>
-    </div>
+    </div> 
+    <Link to={"/estimatedvalue"}>
+    <div className=' flex flex-row mt-3 sm:mx-32 mx-12'>
+    <button className="text-xl mt-1 w-[26px] h-[26px]">{"<"}</button>
+        <p className='mt-2'>Go Back</p>
+    </div></Link>
+      <div className='items-center mx-auto sm:w-[700px]  '>
 
-    <div className='flex flex-col items-center mt-16 mb-14 '>
-        <div>
-        <h2 className='text-4xl text-center font-semibold font-aeroport'>How do you prefer to quote?</h2>
+     <div className='flex sm:flex-row flex-col gap-4 justify-center items-center'>
+     <div className=' justify-between flex sm:w-[315px] rounded-lg w-[250px] h-[110px] border-2 mt-3 items-center px-[17px]'>
+            <div className='text-center mx-auto'>
+                <h1 className='font-semibold text-[#21A3AA]'>Initial collection</h1>
+                <h1 className='font-semibold'>Mini</h1>
+                <p className='font-normal'>1.0m x 1.0m (up to 1 m3)</p>
+                <p className='font-semibold'>$349.00 MXN</p>
+            </div>
         </div>
-        <div className='flex lg:flex-row flex-col gap-10 mx-auto mt-16 text-center'>
-            <Link to="/selfquote">
-        <div className='w-[290px] h-[290px] border-2 content-center rounded-3xl'
-        >
-            <img src={chair} alt="chair"
-            className='w-[104px] h-[102] mx-auto' />
-            <h2 className='text-xl font-bold mt-6 font-aeroport'>Self-quote</h2>
-            <p className='text-xl font-normal font-aeroport'> will do it using the space calculator</p>
+        <div className=' justify-between flex sm:w-[315px] bg-[#21A3AA] rounded-lg w-[250px] h-[110px] border-2 mt-3 items-center px-[17px]'>
+            <div className='text-center text-white mx-auto'>
+                <h1 className='font-semibold  text-4xl mt-2'>$349.00</h1>
+                <h1 className='font-extralight text-xs'>MXN/Monthly</h1>
+                <p className='font-semibold text-md'>Month by Month</p>
+                <p className='font-extralight text-xs'>Maximum flexibility, no commitment of stay.</p>
+            </div>
         </div>
-        </Link>
-        <Link to={"/estimated"}>
-        <div className='w-[290px] h-[290px] border-2 content-center rounded-3xl'>
-            <img src={box2} alt="chair"
-            className='w-[104px] h-[102] mx-auto' />
-            <h2 className='text-xl font-bold mt-6 font-aeroport'>Assisted quote</h2>
-            <p className='text-xl font-normal font-aeroport'> I want personalized help</p>
-        </div></Link>
-        </div>
+     </div>
+     <div className='font-aeroport p-7 pb-1'>
+        <h1 className='font-semibold text-xl'>What is inside the box?</h1>
+        <p className='font-normal  mt-2'>Discribe what is the items that is inside the box</p>
+     </div>
+
+     
+        
+    <div className='p-[25px] py-[29px] mb-7'>
+    <form>
+    <div className=" border-gray-900/10 pb-12">
+           <div className="mt-2">
+           <textarea id="about" name="about" rows="9" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset p-3 focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder='List the items...'></textarea>
+           </div>
+    </div>  
+  <div className="mt-2 flex items-center justify-center gap-x-6">
+   <Link to={"/estimatedprice"}> <button type="button" className="text-sm font-semibold font-aeroport leading-6 w-[289px] h-[52px] rounded-2xl bg-[#3ccad1] text-white">Schedule</button></Link>
+     </div>
+</form>
+        
+    </div>
+   
+      </div>
+
     </div>
     </div>
   )
 }
 
-export default Quote
+export default Textareestimated

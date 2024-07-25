@@ -12,7 +12,7 @@ function Finalestimated() {
   };
   return (
     <div className='bg-gray-100 h-full'>
-       <div className='p-8 flex flex-row justify-between border-b-2'>
+       <div className='p-4 flex flex-row justify-between border-b-2'>
         <div className='flex flex-row gap-2 justify-items-center'>
             <div className='mt-3'>
                 <img src={Homeogo} width={36} height={36} 
@@ -28,7 +28,7 @@ function Finalestimated() {
         </div>
         
         <div className='flex flex-row gap-3 text-white font-semibold text-xl justify-items-center'>
-        <Link to="/form"><button className='bg-[#3ccad1]  hidden sm:block w-[195px] font-aeroport font-normal h-[52px]'>Log In</button></Link>
+        <Link to="/login"><button className='bg-[#3ccad1] rounded-xl  hidden sm:block w-[155px] font-aeroport font-normal h-[52px]'>Log In</button></Link>
         </div>
             
         <nav className=" sm:hidden">
@@ -74,11 +74,8 @@ function Finalestimated() {
       {/* Mobile menu */}
       <div className={`sm:hidden ${isMenuOpen ? 'block' : 'hidden'}`}  id="mobile-menu">
         <div className="space-y-1 px-2 pt-2 pb-3 bg-gray-800">
-          <button className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Log In</button>
-          <button className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Choose your plan</button>
-          <button className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Quote your space</button>
-          
-        </div>
+        <Link to="/login"> <button className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Log In</button>
+        </Link> </div>
       </div>
     </nav>
     </div>  
@@ -89,7 +86,7 @@ function Finalestimated() {
           </div></Link>
         <div className='items-center mx-auto sm:w-[744px]  '>
 
-            <div className='flex md:flex-row flex-col gap-4 justify-center items-center'>
+            <div className='flex md:flex-row flex-col gap-7 justify-center items-center'>
      <div className=' justify-between flex sm:w-[363px] rounded-lg w-[250px] h-[110px] border-2 mt-3 items-center px-[17px]'>
             <div className='text-center mx-auto'>
                 <h1 className='font-semibold text-[#21A3AA]'>Initial collection</h1>
@@ -107,8 +104,8 @@ function Finalestimated() {
             </div>
         </div>
             </div>
-                <div className='flex lg:flex-row flex-col items-center gap-4'>
-            <div>
+                <div className='flex lg:flex-row flex-col items-center  gap-7'>
+            <div className='lg:-mt-60 mt-9'>
                 {/**1st */}
                 <div className='mt-7'>
                    <h1 className='font-aeroport font-semibold text-2xl'>Date of collection</h1>
@@ -119,7 +116,16 @@ function Finalestimated() {
                    </div>
                 </div>
                 {/**2nd */}
-                <div className='mt-6  '>
+                <div className='mt-7'>
+                   <h1 className='font-aeroport font-semibold text-2xl'>Identity</h1>
+                   <p>Write this on your box to identify</p>
+                   <div className='flex p-2 flex-row items-center mt-4 justify-center bg-white h-[82px] sm:w-[363px] w-[250px] gap-2'>
+                    <h1 className='font-aeroport font-bold text-3xl'>342233</h1>
+                   </div>
+                </div>
+            </div>
+               <div>
+               <div className='mt-6  '>
                   <h1 className='font-aeroport font-semibold text-2xl'>Payment method</h1>
                   <p className='font-aeroport font-extralight mt-1'>Select a payment method</p>
                   <div className='flex p-2 flex-row my-2 items-center bg-white h-[44px] sm:w-[363px] w-[250px] gap-2'>
@@ -138,11 +144,9 @@ function Finalestimated() {
                     <h1 className='font-aeroport font-extralight'>Pay in cash (OXXO Pay)</h1>
                    </div>
                 </div>
-            </div>
-               <div>
                 <div className='mt-7 mb-8'>
                     <h1 className='font-aeroport font-semibold text-2xl'>Payment summary</h1>
-                    <div className='sm:w-[363px] w-[250px] sm:h-[200px] h-auto bg-white'>
+                    <div className='sm:w-[363px] w-[250px] mt-4 sm:h-[200px] h-auto bg-white'>
                         <div className='justify-between flex flex-row p-4 border-b-2'>
 
                        <div className='font-aeroport '>
@@ -158,7 +162,7 @@ function Finalestimated() {
                         <h1 className='font-semibold text-md'>MXN</h1>
                        </div>
                         </div>
-                        <div className='flex flex-row justify-between font-aeroport mt-2 mb-5'>
+                        <div className='flex flex-row justify-between font-aeroport mt-2 mb-5 p-4'>
                             <h1 className='font-semibold text-md'>Total</h1>
                             <div>
                                 <h1 className='font-semibold text-md'>$619.00</h1>

@@ -10,8 +10,8 @@ import youtube from "../../assets/icons/youtube.png"
 
 function Footer() {
   return (
-    <div className='bg-black sm:p-24 p-6 content-center flex lg:flex-row flex-col gap-16 font-aeroport'>
-        <div className='font-aeroport'>
+    <div className='bg-black sm:p-24 p-6 content-center flex lg:flex-row flex-col gap-16 font-aeroport rounded-4xl'>
+        <div className='lg:w-1/4 font-aeroport'>
         <div className='flex flex-row gap-2 justify-items-center'>
             <div className='mt-3'>
                 <img src={Homeogo} width={36} height={36} 
@@ -30,7 +30,7 @@ function Footer() {
          </div>
         </div>
 
-        <div className='text-white grid md:grid-cols-3 grid-cols-1 md:gap-16 gap-6 leading-10 text-center'>
+        <div className='lg:w-3/4 text-white grid md:grid-cols-3 grid-cols-1 md:gap-16 gap-6 leading-10 text-center'>
            <div>
             <h1>How does it works?</h1>
             <h1>Frequently Asked Question</h1>
