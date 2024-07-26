@@ -9,7 +9,7 @@ import Workflexible from '../nanopages/Workflexible'
 
 function Allroute() {
   return (
-    <div>
+    <div className=''>
         <Home/>
         <Feature/>
         <Workflexible/>

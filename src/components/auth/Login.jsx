@@ -22,8 +22,8 @@ function Login() {
             </div>
             <div className='justify-center items-center flex flex-col font-aeroport mt-5 text-center text-xl'>
                 <h1 className='font-semibold'>Admin Login</h1>
-                <input type="email" placeholder='Email Address'  className='sm:w-[393px] w-auto mt-8 h-[52px] bg-gray-200'/>
-                <input type="password" placeholder='Password'  className='sm:w-[393px] w-auto mt-4 h-[52px] bg-gray-200'/>
+                <input type="email" placeholder='Email Address'  className='sm:w-[393px] p-2 w-auto mt-8 h-[52px] bg-gray-200'/>
+                <input type="password" placeholder='Password'  className='sm:w-[393px] p-2 w-auto mt-4 h-[52px] bg-gray-200'/>
             </div>
             <div className='flex flex-col gap-3 mt-6 items-center'>
             <Link to={"/dashboardmenu"}>

@@ -115,7 +115,7 @@ const lists = {
         { name: 'Chair', quantity: 2, length: 0.53, width: 0.40, height: 1.08, weight: 5.0 }
       ]
 };
-const ItemList = ({ items }) => {
+const ItemList = ({ items, onItemSelect }) => {
   const scrollRef = useRef(null);
   const scroll = (direction) => {
       const { current } = scrollRef;
@@ -127,23 +127,57 @@ const ItemList = ({ items }) => {
   };
   return( 
      <div className="relative ">
-<button onClick={() => scroll('left')} className="absolute left-0 top-7 transform -translate-y-1/2 z-10 text-8xl -ml-9 font-extralight">{"<"}</button>
-  <div className=' overflow-hidden gap-3 flex flex-row  ' ref={scrollRef} style={{ scrollBehavior: 'smooth' }} >  
+<button onClick={() => scroll('left')} className="absolute left-0 top-5 transform pb-1 px-3 text-gray-300  -translate-y-1/2 z-10 text-2xl bg-[#3ccad1]/[0.2] justify-items-center rounded-full -ml-4  font-extralight">{"<"}</button>
+  <div className='overflow-x-hidden gap-3 whitespace-nowrap flex w-auto ' ref={scrollRef} style={{ scrollBehavior: 'smooth' }} >  
       {items.map((item, index) => (
-        <button key={index}  className=' h-[74px] w-fit border-2 px-10 rounded-full font font-aeroport '>
+        <button key={index} onClick={() => onItemSelect(item)} className='h-[44px] w-auto px-6  border-2 rounded-full font font-aeroport '>
           {item.name}
         </button>
       ))}    
     </div>
-    <button onClick={() => scroll('right')} className="absolute right-0 top-7 transform -translate-y-1/2 z-10 text-8xl -mr-9 font-extralight">{">"}</button>
+    <button onClick={() => scroll('right')} className="absolute right-0 top-5 pb-1 px-3 text-gray-300  transform -translate-y-1/2 z-10 text-2xl bg-[#3ccad1]/[0.2] -mr-4 lg:-mr-6 rounded-full font-extralight">{">"}</button>
 </div>
   );
 };
+const ItemDetails = ({ item}) => (
+  <div className="bg-[#F1F1F1] gap-4 mt-3 p-3 flex flex-row">
+    <div>
+     
+                    
+                    <img src={no1} alt="" 
+                    className='w-[34px] h-[34px]'/>
+                  </div>
+      <div>
+    <div className=' '>
+      <div className='flex gap-2 '>
+    <p className=" font-semibold">{item.name}</p>
+    <p className=" font-semibold"> Weight {item.weight}</p>
+    <p className=" font-semibold"> Quantity{item.quantity} </p>
+      </div>
+      <div className='flex gap-2'>
+    <p className=" font-semibold ">Length:{item.length}</p>
+    <p className=" font-semibold  ">Width:{item.width}</p>
+    <p className=" font-semibold  ">Height:{item.height}</p>
+      </div>
+    
+
+    </div>
+
+        </div>            
+  </div>
+);
 function Addedquote() {
-  const [visibleList, setVisibleList] = useState(null);  
-    const handleButtonClick = (listName) => {
-      setVisibleList(visibleList === listName ? null : listName);
-    }; 
+  const [visibleList, setVisibleList] = useState(null); 
+  const [selectedItems, setSelectedItems] = useState({});
+  const handleButtonClick = (listName) => {
+    setVisibleList(visibleList === listName ? null : listName);
+  }; 
+  const handleItemSelect = (item) => {
+    setSelectedItems(prevState => ({
+      ...prevState,
+      [item.name]: item
+    }));
+  };
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -223,8 +257,8 @@ function Addedquote() {
         <div>
         <h2 className='text-4xl font-bold font-aeroport'>Self-quote</h2>
         </div>
-        <div className='flex flex-row  gap-10 mx-auto mt-8 '>       
-        <div className='lg:w-[1070px] w-[300px] gap-16 sm:w-[450px] flex lg:flex-row flex-col  lg:h-[473px] h-auto border-2 rounded-3xl sm:p-[25px] p-[18px] mb-7'>
+        <div className='flex flex-row  gap-10 mx-auto mt-8 mx-1 '>       
+        <div className='lg:w-[1070px] w-[340px] gap-16 sm:w-[450px] flex lg:flex-row flex-col   h-auto border-2 rounded-3xl sm:p-[25px] p-[18px] mb-7'>
            <div>
             <div className='flex flex-col'>
             <div>
@@ -246,29 +280,30 @@ function Addedquote() {
             <div>
                 <h2 className='text-xl text-center sm:text-left font-semibold font-aeroport'>Select Items</h2>
             </div>
-            <div className='mt-4 text-center' >                     
-            {visibleList && <ItemList items={lists[visibleList]} />}           
-        </div>
+            <div className='mt-4 text-center w-full' >                   
+            {visibleList && <ItemList items={lists[visibleList]} onItemSelect={handleItemSelect} />}
+            </div>
+            {visibleList && (
+          <div className="mt-4">
+           
+          </div>
+        )}
             </div> 
             <div className='flex flex-col mt-3'>
             <div>
                 <h2 className='text-xl text-center sm:text-left font-semibold font-aeroport'>Added Items</h2>
                 
-                <div className='flex flex-row sm:gap-4 gap-2 items-center mt-4 bg-[#F1F1F1]  sm:h-[82px] h-auto md:w-fit sm:px-4 p-2 '>
-                  <div>
-                    <img src={no1} alt="" 
-                    className='w-[34px] h-[34px]'/>
-                  </div>
-                  <div className='font-aeroport font-normal'>
-                      <h1 className=' text-wrap'>Single Bed 0.98m3 | 30.1 kgs</h1>
-                      <h1 className=''>
-                      (Width 184cm Depth 95cm High 56cm)
-                      </h1>
+                <div className='flex flex-row  sm:gap-4 gap-2 items-center mt-4   sm:h-auto h-auto md:w-auto sm:px-2  '>
+                  
+                  <div className='font-aeroport font-normal mt-5'>
+                    {Object.values(selectedItems).map((item, index) => (
+            <ItemDetails key={index} item={item} />
+          ))}
                   </div>
                 </div>
             </div>
             </div> 
-            <div className='text-right mt-20'>
+            <div className='text-right mt-10'>
              <Link to="/recomend">
             <button className='bg-[#3ccad1] w-[195px] h-[52px] rounded-2xl font-aeroport font-semibold '
             

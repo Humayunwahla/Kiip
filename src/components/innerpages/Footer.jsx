@@ -10,7 +10,7 @@ import youtube from "../../assets/icons/youtube.png"
 
 function Footer() {
   return (
-    <div className='bg-black sm:p-24 p-6 content-center flex lg:flex-row flex-col gap-16 font-aeroport rounded-4xl'>
+    <div className='bg-black w-full bg-fixed rounded-3xl sm:p-24 p-6 content-center flex lg:flex-row flex-col gap-16 font-aeroport rounded-4xl'>
         <div className='lg:w-1/4 font-aeroport'>
         <div className='flex flex-row gap-2 justify-items-center'>
             <div className='mt-3'>

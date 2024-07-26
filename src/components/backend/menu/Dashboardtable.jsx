@@ -73,17 +73,17 @@ function Dashboardtable() {
 </div> */}
 {/* Table */}
 <div className="overflow-x-auto md:overflow-none w-full">
-          <table className="w-full gap-5   border border-gray-300 mt-6">
+          <table className="w-full gap-8   border border-gray-300 mt-6">
             {/* Table Header */}
             <thead className="bg-gray-200 text-lg font-bold font-Nunito">
               <tr className="text-center">
-                <th className="border-b-2 py-2 px-5">Space</th>
-                <th className="border-b-2 py-2 px-5">Location</th>
-                <th className="border-b-2 py-2 px-5">Date-Time</th>
-                <th className="border-b-2 py-2 px-5">Size</th>
-                <th className="border-b-2 py-2 px-5">Amount</th>
-                <th className="border-b-2 py-2 px-5"></th>
-                <th className="border-b-2 py-2 px-5"></th>
+                <th className="border-b-2 py-2 px-14">Space</th>
+                <th className="border-b-2 py-2 px-14">Location</th>
+                <th className="border-b-2 py-2 px-14">Date-Time</th>
+                <th className="border-b-2 py-2 px-14">Size</th>
+                <th className="border-b-2 py-2 px-14">Amount</th>
+                <th className="border-b-2 py-2 px-14"></th>
+                <th className="border-b-2 py-2 px-14"></th>
               </tr>
             </thead>
             {/* Table Body */}
